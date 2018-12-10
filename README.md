@@ -1,4 +1,4 @@
-# elasticsearch
+# elasticsearch 5.6 test pass
 
 sometimes we need to scale down elasticsearch cluster to one node
 
