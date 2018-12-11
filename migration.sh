@@ -8,7 +8,7 @@
   SRC_NODE="hot-3"
 
   curl ${ES_HOST}/_cat/shards > shards
-  grep "hot-3" shards > unassigned_shards
+  grep "${SRC_NODE}" shards > unassigned_shards
 
   # Now move all shard in the unnasigned_shards file onto the target node
   while read LINE; do
@@ -32,7 +32,7 @@
            }
          }
        ]
-    }"; echo
+    }";
     echo "------------------------------"
   done <unassigned_shards
 
